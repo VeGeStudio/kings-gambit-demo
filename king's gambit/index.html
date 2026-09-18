@@ -947,7 +947,7 @@
 
             <div class="settings-title">Адрес сервера мультиплеера</div>
             <div class="input-group">
-                <input type="text" id="server-url-input" class="nickname-input" placeholder="http://localhost:3000">
+                <input type="text" id="server-url-input" class="nickname-input" placeholder="https://kings-server-lwj3.onrender.com">
             </div>
 
             <div class="settings-title">Выбор стиля доски</div>
@@ -1216,7 +1216,7 @@ const state = {
     currentAvatarKey: 'icon1',
     currentAppTheme: 'dark',
     currentAppBg: 'default',
-    serverUrl: localStorage.getItem('chess_server_url') || 'http://localhost:3000',
+    serverUrl: localStorage.getItem('chess_server_url') || 'https://kings-server-lwj3.onrender.com',
     
     board: [],
     turn: 'w',
@@ -1618,7 +1618,7 @@ function saveAndCloseSettings() {
         return;
     }
 
-    const sUrl = document.getElementById('server-url-input').value.trim() || 'http://localhost:3000';
+    const sUrl = document.getElementById('server-url-input').value.trim() || 'https://kings-server-lwj3.onrender.com';
     if (sUrl !== state.serverUrl) {
         state.serverUrl = sUrl;
         localStorage.setItem('chess_server_url', sUrl);
